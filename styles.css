@@ -1,0 +1,60 @@
+:root {
+  --font-size-body: 1rem;
+  --font-size-header: 2rem;
+  --font-size-section-title: 1.5rem;
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-stone-100: hsl(30, 54%, 90%);
+  --color-stone-150: hsl(30, 18%, 87%);
+  --color-stone-600: hsl(30, 10%, 34%);
+  --color-stone-900: hsl(24, 5%, 18%);
+  --color-brown: hsl(14, 45%, 36%);
+  --color-rose-light: hsl(330, 100%, 98%);
+  --color-rose-dark: hsl(332, 51%, 32%);
+
+  --font-family: "Young Serif";
+  --font-family-accent: "Outfit";
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url(./fonts/Young_Serif/YoungSerif-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(./fonts/Outfit/Outfit-VariableFont_wght.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  font-size: var(--font-size-body);
+}
+
+article {
+  width: 400px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  padding: 1.5rem;
+}
+
+header {
+  img {
+    max-width: 100%;
+  }
+
+  h3 {
+    font-size: var(--font-size-header);
+    font-family: var(--font-family);
+  }
+
+
+}
+
+/* dl > * {
+  margin: 0;
+} */
