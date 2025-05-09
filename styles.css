@@ -1,8 +1,4 @@
 :root {
-  --font-size-body: 1rem;
-  --font-size-header: 2rem;
-  --font-size-section-title: 1.5rem;
-
   --color-white: hsl(0, 0%, 100%);
   --color-stone-100: hsl(30, 54%, 90%);
   --color-stone-150: hsl(30, 18%, 87%);
@@ -11,9 +7,15 @@
   --color-brown: hsl(14, 45%, 36%);
   --color-rose-light: hsl(330, 100%, 98%);
   --color-rose-dark: hsl(332, 51%, 32%);
-
-  --font-family: "Young Serif";
-  --font-family-accent: "Outfit";
+  
+  --font-family-title: "Young Serif";
+  --font-family-body: "Outfit";
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --font-size-body: 1rem;
+  --font-size-section-title: 1.6rem;
+  --font-size-header: 2rem;
 }
 
 @font-face {
@@ -27,34 +29,151 @@
   src: url(./fonts/Outfit/Outfit-VariableFont_wght.ttf);
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   background-color: black;
-  font-size: var(--font-size-body);
+}
+
+p, li {
+  line-height: 1.5rem;
 }
 
 article {
+  font-size: var(--font-size-body);
+  font-family: var(--font-family-body);
   width: 400px;
   margin: 0 auto;
+  padding-block-end: 1rem;
   background-color: var(--color-white);
-  padding: 1.5rem;
+
+  section {
+    margin: 1.5rem;
+    color: var(--color-stone-600);
+  }
+
+  section:not(.preparation-time-section) {
+    h4 {
+      font-size: var(--font-size-section-title);
+      font-family: var(--font-family-title);
+      font-weight: var(--font-weight-light);
+      color: var(--color-brown);
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+.recipe-image {
+  max-width: 100%;
 }
 
 header {
-  img {
-    max-width: 100%;
-  }
+  padding: 1.8rem;
+  padding-block-end: 0;
 
   h3 {
-    font-size: var(--font-size-header);
-    font-family: var(--font-family);
+    margin: 0 auto;
+    font-family: var(--font-family-title);
+    font-size: 2.25rem;
+    font-weight: var(--font-weight-light);
+    color: var(--color-stone-900);
   }
 
-
+  p {
+    padding-top: 1rem;
+    color: var(--color-stone-600);
+  }
 }
 
-/* dl > * {
-  margin: 0;
-} */
+ul, ol {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  margin-left: .25rem;
+  list-style: none;
+  counter-reset: item;
+ 
+  /*? To having granular control over the bullet points spacing */
+  li::before {
+    content: "•";
+    margin-right: 1.5rem;
+    color: var(--color-brown);
+  }
+
+  span {
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+.preparation-time-section {
+  padding: 1.4rem;
+  border-radius: 8px;
+  background-color: var(--color-rose-light);
+
+  h4 {
+    padding-block-end: 1rem;
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-rose-dark);
+  }
+  
+  li::before {
+    color: var(--color-rose-dark);
+  }
+}
+
+.ingredients-section {
+  /*? To vertically center the <li> bullets with the text*/
+  li {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.instructions-section {
+  /*? To have numbers as <li> marker */
+  li::before {
+    counter-increment: item;
+    content: counter(item) ".";
+    margin-right: 1rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-brown);
+  }
+}
+
+.nutrition-section {
+  p {
+    margin-block-end: 1.25rem;
+  }
+}
+
+dl  {
+  div {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  dd {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-brown);
+  }
+}
+
+hr:not(.nutrition-separator) {
+  margin-block: 2rem;
+  margin-inline: 1.5rem;
+  opacity: .2;
+  color: var(--color-stone-100);
+}
+
+.nutrition-separator {
+  margin-block: .75rem;
+  opacity: .2;
+  color: var(--color-stone-100);
+}
