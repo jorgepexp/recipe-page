@@ -156,7 +156,7 @@ dl  {
     display: flex;
     justify-content: space-between;
     width: 200px;
-    margin: 0 auto;
+    margin-left: 2rem;
   }
 
   dd {
@@ -176,4 +176,16 @@ hr:not(.nutrition-separator) {
   margin-block: .75rem;
   opacity: .2;
   color: var(--color-stone-100);
+}
+
+@media (min-width: 1200px) {
+  article {
+    padding: 2rem;
+    width: 800px;
+  }
+
+  header, section {
+    margin: 0 ;
+    padding: 0;
+  }
 }
