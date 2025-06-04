@@ -1,28 +1,29 @@
 # Recipe Page
 
-This is a solution to the [Recipe page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm).
+This is a solution to the
+<a href="https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm" target="_blank" rel="noopener noreferrer">Recipe page challenge on Frontend Mentor.</a>
 
 ## Table of contents
 
 - [Recipe Page](#recipe-page)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
-    - [Screenshot](#screenshot)
+    - [Screenshots](#screenshots)
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
 
 ## Overview
 
-### Screenshot
-| Desktop 1 | Mobile 2 |
+### Screenshots
+| Desktop | Mobile |
 |----------|----------|
 | ![img1](desktop-screenshot.png) | ![img2](mobile-screenshot.png) |
 
 
 ### Links
 
-- Live Site URL: [Blog preview card](https://jorgepexp.github.io/recipe-page/)
+- Live Site  <a href="https://jorgepexp.github.io/recipe-page/" target="_blank" rel="noopener noreferrer">URL</a>
 
 ## My process
 
