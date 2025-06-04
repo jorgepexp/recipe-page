@@ -15,8 +15,10 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 ## Overview
 
 ### Screenshot
-![Desktop screenshot](desktop-screenshot.png)
-![Mobile screenshot](mobile-screenshot.png)
+| Desktop 1 | Mobile 2 |
+|----------|----------|
+| ![img1](desktop-screenshot.png) | ![img2](mobile-screenshot.png) |
+
 
 ### Links
 
